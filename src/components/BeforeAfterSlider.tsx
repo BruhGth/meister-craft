@@ -73,22 +73,17 @@ export function BeforeAfterSlider({
         draggable={false}
         className="absolute inset-0 h-full w-full object-cover"
       />
-      {/* Before (clipped) */}
-      <div
-        className="absolute inset-0 h-full overflow-hidden"
-        style={{ width: `${pos}%` }}
-      >
-        <img
-          src={beforeSrc}
-          alt={beforeAlt}
-          width={1280}
-          height={896}
-          loading="lazy"
-          draggable={false}
-          className="absolute inset-0 h-full w-full object-cover"
-          style={{ width: `${(100 / Math.max(pos, 0.0001)) * 100}%`, maxWidth: "none" }}
-        />
-      </div>
+      {/* Before (clipped via clip-path so image keeps natural cover sizing) */}
+      <img
+        src={beforeSrc}
+        alt={beforeAlt}
+        width={1280}
+        height={896}
+        loading="lazy"
+        draggable={false}
+        className="absolute inset-0 h-full w-full object-cover"
+        style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
+      />
 
       {/* Labels */}
       <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-foreground/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-background backdrop-blur">
