@@ -5,6 +5,7 @@ import { Menu, X, Phone, PaintRoller } from "lucide-react";
 const nav = [
   { to: "/", label: "Start" },
   { to: "/leistungen", label: "Leistungen" },
+  { to: "/referenzen", label: "Referenzen" },
   { to: "/ueber-uns", label: "Über uns" },
   { to: "/kontakt", label: "Kontakt" },
 ];
