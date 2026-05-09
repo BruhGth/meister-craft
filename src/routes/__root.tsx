@@ -72,14 +72,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Meister Vogel — Malermeister & Lackierer Berlin" },
+      { name: "description", content: "Meisterhafte Malerarbeiten, Fassadengestaltung und Lackierungen vom Meisterbetrieb in Berlin." },
+      { name: "author", content: "Malerbetrieb Vogel GmbH" },
+      { property: "og:title", content: "Meister Vogel — Malermeister & Lackierer" },
+      { property: "og:description", content: "Hochwertige Malerarbeiten vom Meisterbetrieb." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
@@ -96,7 +95,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="de">
       <head>
         <HeadContent />
       </head>
