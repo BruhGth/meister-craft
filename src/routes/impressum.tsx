@@ -14,15 +14,15 @@ function ImpressumPage() {
         <div className="mt-10 space-y-8 text-sm leading-relaxed text-muted-foreground">
           <div>
             <h2 className="font-display text-lg font-semibold text-foreground">Angaben gemäß § 5 TMG</h2>
-            <p className="mt-3">Malerbetrieb Vogel GmbH<br />Hauptstraße 42<br />10827 Berlin</p>
+            <p className="mt-3">Raumgeschneidert GmbH<br />Hofmauerweg 12<br />70734 Fellbach</p>
           </div>
           <div>
             <h2 className="font-display text-lg font-semibold text-foreground">Vertreten durch</h2>
-            <p className="mt-3">Markus Vogel, Malermeister</p>
+            <p className="mt-3">Lars Schneider, Malermeister</p>
           </div>
           <div>
             <h2 className="font-display text-lg font-semibold text-foreground">Kontakt</h2>
-            <p className="mt-3">Telefon: 030 123 456 789<br />E-Mail: info@meister-vogel.de</p>
+            <p className="mt-3">Telefon: +49 000 000<br />E-Mail: info@raumgeschneidert.de</p>
           </div>
           <div>
             <h2 className="font-display text-lg font-semibold text-foreground">Registereintrag</h2>
@@ -34,7 +34,7 @@ function ImpressumPage() {
           </div>
           <div>
             <h2 className="font-display text-lg font-semibold text-foreground">Aufsichtsbehörde</h2>
-            <p className="mt-3">Handwerkskammer Berlin, Blücherstraße 68, 10961 Berlin</p>
+            <p className="mt-3">Handwerkskammer Stuttgart, Heilbronner Str. 43, 70191 Stuttgart</p>
           </div>
         </div>
       </section>

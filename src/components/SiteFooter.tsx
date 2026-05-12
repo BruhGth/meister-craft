@@ -17,7 +17,7 @@ export function SiteFooter() {
               </div>
             </div>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
-              Ihr zertifizierter Meisterbetrieb für hochwertige Maler- und Lackierarbeiten in Berlin und Umgebung. Tradition trifft Präzision.
+              Ihr zertifizierter Meisterbetrieb für hochwertige Maler- und Lackierarbeiten in Fellbach und Umgebung. Tradition trifft Präzision.
             </p>
           </div>
 
@@ -33,15 +33,15 @@ export function SiteFooter() {
           <div>
             <h4 className="font-display text-sm font-semibold tracking-wide">Kontakt</h4>
             <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
-              <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5 text-primary" /> 030 123 456 789</li>
-              <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 text-primary" /> info@meister-vogel.de</li>
-              <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-primary" /> Hauptstraße 42, 10827 Berlin</li>
+              <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5 text-primary" /> +49 000 000</li>
+              <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 text-primary" /> info@raumgeschneidert.de</li>
+              <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-primary" /> Hofmauerweg 19, 70734 Fellbach</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Malerbetrieb Vogel GmbH. Alle Rechte vorbehalten.</p>
+          <p>© {new Date().getFullYear()} Raumgeschneidert GmbH. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
             <Link to="/impressum" className="hover:text-foreground">Impressum</Link>
             <Link to="/datenschutz" className="hover:text-foreground">Datenschutz</Link>

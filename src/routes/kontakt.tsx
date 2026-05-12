@@ -39,9 +39,9 @@ function ContactPage() {
 
             <div className="mt-8 space-y-5">
               {[
-                { icon: Phone, label: "Telefon", val: "030 123 456 789", href: "tel:+4930123456789" },
-                { icon: Mail, label: "E-Mail", val: "info@meister-vogel.de", href: "mailto:info@meister-vogel.de" },
-                { icon: MapPin, label: "Adresse", val: "Hauptstraße 42, 10827 Berlin" },
+                { icon: Phone, label: "Telefon", val: "+49 000 000", href: "tel:+49000000" },
+                { icon: Mail, label: "E-Mail", val: "info@raumgeschneidert.de", href: "mailto:info@raumgeschneidert.de" },
+                { icon: MapPin, label: "Adresse", val: "Hofmauerweg 19, 70734 Fellbach" },
                 { icon: Clock, label: "Öffnungszeiten", val: "Mo–Fr 7:30 – 17:00 Uhr" },
               ].map((c) => {
                 const Inner = (

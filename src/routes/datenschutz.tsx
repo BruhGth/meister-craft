@@ -18,7 +18,7 @@ function DatenschutzPage() {
           </div>
           <div>
             <h2 className="font-display text-lg font-semibold text-foreground">2. Verantwortliche Stelle</h2>
-            <p className="mt-3">Malerbetrieb Vogel GmbH<br />Hauptstraße 42, 10827 Berlin<br />info@meister-vogel.de</p>
+            <p className="mt-3">Raumgeschneidert GmbH<br />Hofmauerweg 19, 70734 Fellbach<br />info@raumgeschneidert.de</p>
           </div>
           <div>
             <h2 className="font-display text-lg font-semibold text-foreground">3. Erhebung und Verarbeitung</h2>

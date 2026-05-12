@@ -6,18 +6,18 @@ import aboutImg from "@/assets/about-team.jpg";
 export const Route = createFileRoute("/ueber-uns")({
   head: () => ({
     meta: [
-      { title: "Über uns — Malermeister Vogel" },
-      { name: "description", content: "Seit 1987 steht Malermeister Vogel für saubere Arbeit, Tradition und Meisterqualität in Berlin." },
-      { property: "og:title", content: "Über uns — Meisterbetrieb seit 1987" },
-      { property: "og:description", content: "Drei Generationen Handwerkskunst aus Berlin." },
+      { title: "Über uns — Raumgeschneidert" },
+      { name: "description", content: "Seit 2026 steht Raumgeschneidert für saubere Arbeit, Tradition und Meisterqualität in Fellbach." },
+      { property: "og:title", content: "Über uns — Meisterbetrieb seit 2026" },
+      { property: "og:description", content: "Erste Generation Handwerkskunst aus Fellbach." },
     ],
   }),
   component: AboutPage,
 });
 
 const values = [
-  { icon: Award, title: "Meisterbetrieb", desc: "Eingetragen in der Handwerkskammer Berlin seit 1987." },
-  { icon: Users, title: "Eigenes Team", desc: "Festangestellte Gesellen und Auszubildende — keine Subunternehmer." },
+  { icon: Award, title: "Meisterbetrieb", desc: "Eingetragen in der Handwerkskammer Fellbach seit 2026." },
+  { icon: Users, title: "Eigenes Team", desc: "Echte Handwerkskunst durch unser eingespieltes Team." },
   { icon: Clock, title: "Pünktlichkeit", desc: "Termine sind verbindlich. Punkt." },
   { icon: Shield, title: "Garantie", desc: "5 Jahre Gewährleistung auf alle Arbeiten." },
 ];
@@ -30,10 +30,10 @@ function AboutPage() {
           <div>
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Über uns</span>
             <h1 className="mt-4 font-display text-5xl font-semibold leading-[1.05] sm:text-6xl">
-              Drei Generationen<br /><span className="text-primary">Handwerkskunst</span>
+              Erste Generation<br /><span className="text-primary">Handwerkskunst</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Was 1987 in einer kleinen Werkstatt in Kreuzberg begann, ist heute einer der angesehensten Malerbetriebe Berlins. Geblieben ist unser Anspruch: jedes Projekt mit der gleichen Sorgfalt zu behandeln, als wäre es das eigene Zuhause.
+              Was 2026 in einer kleinen Werkstatt in Fellbach begann, ist heute einer der angesehensten Malerbetriebe Fellbachs. Geblieben ist unser Anspruch: jedes Projekt mit der gleichen Sorgfalt zu behandeln, als wäre es das eigene Zuhause.
             </p>
           </div>
           <div className="relative">
@@ -66,7 +66,7 @@ function AboutPage() {
           <p className="font-display text-3xl font-semibold leading-snug sm:text-4xl">
             "Ein Anstrich ist kein Produkt — er ist ein Versprechen, das jeden Tag eingelöst wird, wenn Sie nach Hause kommen."
           </p>
-          <p className="mt-6 text-sm uppercase tracking-[0.2em] text-muted-foreground">Markus Vogel · Malermeister</p>
+          <p className="mt-6 text-sm uppercase tracking-[0.2em] text-muted-foreground">Lars Schneider · Malermeister</p>
           <Link to="/kontakt" className="mt-10 inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-4 text-sm font-semibold text-background hover:-translate-y-0.5 transition-transform">
             Lernen Sie uns kennen <ArrowRight className="h-4 w-4" />
           </Link>

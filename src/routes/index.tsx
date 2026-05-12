@@ -6,10 +6,10 @@ import heroImg from "@/assets/hero-painter.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Meister Vogel — Malermeister & Lackierer in Berlin" },
+      { title: "Raumgeschneidert — Malermeister & Lackierer in Fellbach" },
       { name: "description", content: "Meisterhafte Malerarbeiten, Fassadengestaltung und Lackierungen vom zertifizierten Meisterbetrieb. Sauberes Arbeiten, faire Preise, garantierte Qualität." },
-      { property: "og:title", content: "Meister Vogel — Malermeister & Lackierer" },
-      { property: "og:description", content: "Hochwertige Malerarbeiten vom Meisterbetrieb in Berlin." },
+      { property: "og:title", content: "Raumgeschneidert — Malermeister & Lackierer" },
+      { property: "og:description", content: "Hochwertige Malerarbeiten vom Meisterbetrieb in Fellbach." },
     ],
   }),
   component: HomePage,
@@ -33,7 +33,7 @@ function HomePage() {
         </div>
         <div className="relative mx-auto flex max-w-7xl flex-col px-6 pt-28 pb-32 lg:pt-40 lg:pb-44">
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.2em] text-white backdrop-blur">
-            <Award className="h-3.5 w-3.5 text-accent" /> Meisterbetrieb seit 1987
+            <Award className="h-3.5 w-3.5 text-accent" /> Meisterbetrieb seit 2026
           </span>
           <h1 className="mt-8 max-w-4xl font-display text-5xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
             Meisterhafte Malerarbeiten<br />
@@ -64,8 +64,8 @@ function HomePage() {
       <section className="border-b border-border/60 bg-background">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 sm:grid-cols-3">
           {[
-            { k: "37+", v: "Jahre Erfahrung" },
-            { k: "1.200+", v: "Zufriedene Kunden" },
+            { k: "0", v: "Jahre Erfahrung" },
+            { k: "100", v: "Zufriedene Kunden" },
             { k: "100%", v: "Meisterqualität" },
           ].map((s) => (
             <div key={s.v} className="flex items-baseline gap-3">
@@ -104,7 +104,7 @@ function HomePage() {
       <section className="bg-secondary/50">
         <div className="mx-auto grid max-w-7xl gap-16 px-6 py-24 lg:grid-cols-2 lg:items-center">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Warum Meister Vogel</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Warum Raumgeschneidert</span>
             <h2 className="mt-3 font-display text-4xl font-semibold sm:text-5xl">Tradition. Präzision. Vertrauen.</h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
               Seit drei Generationen stehen wir für saubere Ausführung, transparente Preise und termingerechte Fertigstellung. Jeder Auftrag wird vom Meister persönlich begleitet.
@@ -135,7 +135,7 @@ function HomePage() {
                 <div className="absolute inset-0 flex flex-col justify-end p-8 text-primary-foreground">
                   <Paintbrush className="h-10 w-10 mb-4 opacity-80" />
                   <p className="font-display text-2xl font-semibold leading-snug">"Ein gutes Handwerk erkennt man an den Details."</p>
-                  <p className="mt-3 text-sm opacity-90">— Markus Vogel, Malermeister</p>
+                  <p className="mt-3 text-sm opacity-90">— Lars Schneider, Malermeister</p>
                 </div>
               </div>
             </div>

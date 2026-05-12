@@ -20,7 +20,7 @@ export function SiteHeader() {
             <PaintRoller className="h-5 w-5" />
           </div>
           <div className="leading-tight">
-            <div className="font-display text-lg font-semibold text-foreground">Meister Vogel</div>
+            <div className="font-display text-lg font-semibold text-foreground">Raumgeschneidert</div>
             <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Malermeister & Lackierer</div>
           </div>
         </Link>
@@ -44,7 +44,7 @@ export function SiteHeader() {
             href="tel:+4930123456789"
             className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-transform hover:-translate-y-0.5"
           >
-            <Phone className="h-4 w-4" /> 030 123 456 789
+            <Phone className="h-4 w-4" /> +49 000 000
           </a>
         </div>
 
@@ -73,7 +73,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <a
-              href="tel:+4930123456789"
+              href="tel:+49000000"
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-4 py-3 text-sm font-medium text-background"
             >
               <Phone className="h-4 w-4" /> Jetzt anrufen
