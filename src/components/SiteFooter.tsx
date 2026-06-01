@@ -12,7 +12,7 @@ export function SiteFooter() {
                 <PaintRoller className="h-5 w-5" />
               </div>
               <div className="leading-tight">
-                <div className="font-display text-lg font-semibold">Meister Vogel</div>
+                <div className="font-display text-lg font-semibold">Raumgeschneidert</div>
                 <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Malermeister & Lackierer</div>
               </div>
             </div>
@@ -41,7 +41,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Raumgeschneidert GmbH. Alle Rechte vorbehalten.</p>
+          <p>© {new Date().getFullYear()} Raumgeschneidert. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
             <Link to="/impressum" className="hover:text-foreground">Impressum</Link>
             <Link to="/datenschutz" className="hover:text-foreground">Datenschutz</Link>
