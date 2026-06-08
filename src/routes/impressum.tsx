@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 
 export const Route = createFileRoute("/impressum")({
-  head: () => ({ meta: [{ title: "Impressum — Meister Vogel" }, { name: "description", content: "Impressum nach § 5 TMG." }] }),
+  head: () => ({ meta: [{ title: "Impressum — Raumgeschneidert" }, { name: "description", content: "Impressum nach § 5 TMG." }] }),
   component: ImpressumPage,
 });
 
@@ -14,7 +14,7 @@ function ImpressumPage() {
         <div className="mt-10 space-y-8 text-sm leading-relaxed text-muted-foreground">
           <div>
             <h2 className="font-display text-lg font-semibold text-foreground">Angaben gemäß § 5 TMG</h2>
-            <p className="mt-3">Raumgeschneidert GmbH<br />Hofmauerweg 12<br />70734 Fellbach</p>
+            <p className="mt-3">Raumgeschneidert <br />Hofmauerweg 12<br />70734 Fellbach</p>
           </div>
           <div>
             <h2 className="font-display text-lg font-semibold text-foreground">Vertreten durch</h2>
