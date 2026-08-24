@@ -3,9 +3,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { referenceProjects } from "@/lib/references";
 
-const SLIDE_WIDTH = "58%";
-const SIDE_PADDING = "21%";
-
 export function ReferenceCarousel() {
   const [index, setIndex] = useState(0);
   const total = referenceProjects.length;
@@ -42,8 +39,7 @@ export function ReferenceCarousel() {
       <div className="relative">
         <div
           ref={trackRef}
-          className="relative flex overflow-x-hidden scroll-smooth"
-          style={{ paddingLeft: SIDE_PADDING, paddingRight: SIDE_PADDING }}
+          className="relative flex overflow-x-hidden scroll-smooth px-[6%] sm:px-[12%] lg:px-[21%]"
         >
           {referenceProjects.map((p, i) => (
             <div
@@ -51,8 +47,7 @@ export function ReferenceCarousel() {
               ref={(el) => {
                 slideRefs.current[i] = el;
               }}
-              className="shrink-0 px-1.5 sm:px-2"
-              style={{ width: SLIDE_WIDTH }}
+              className="w-[88%] shrink-0 px-1.5 sm:w-[76%] sm:px-2 lg:w-[58%]"
             >
               <div
                 role={i === index ? undefined : "button"}
@@ -86,7 +81,7 @@ export function ReferenceCarousel() {
           type="button"
           onClick={goPrev}
           aria-label="Vorheriges Projekt"
-          className="absolute left-0 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-background text-foreground shadow-[var(--shadow-soft)] ring-1 ring-border transition hover:bg-secondary sm:left-1"
+          className="absolute left-0 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-background text-foreground shadow-[var(--shadow-soft)] ring-1 ring-border transition hover:bg-secondary sm:left-1 sm:h-10 sm:w-10"
         >
           <ChevronLeft className="h-4 w-4" />
         </button>
@@ -94,7 +89,7 @@ export function ReferenceCarousel() {
           type="button"
           onClick={goNext}
           aria-label="Nächstes Projekt"
-          className="absolute right-0 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-background text-foreground shadow-[var(--shadow-soft)] ring-1 ring-border transition hover:bg-secondary sm:right-1"
+          className="absolute right-0 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-background text-foreground shadow-[var(--shadow-soft)] ring-1 ring-border transition hover:bg-secondary sm:right-1 sm:h-10 sm:w-10"
         >
           <ChevronRight className="h-4 w-4" />
         </button>
