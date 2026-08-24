@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
+import { ReferenceCarousel } from "@/components/ReferenceCarousel";
 import { ArrowRight, Award, CheckCircle2, Paintbrush, Home, Building2, Wallpaper, Sparkles, Phone } from "lucide-react";
 import heroImg from "@/assets/hero-painter.jpg";
 
@@ -97,6 +98,22 @@ function HomePage() {
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Referenzen preview */}
+      <section className="mx-auto max-w-7xl px-6 pb-24">
+        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <div className="max-w-2xl">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Referenzen</span>
+            <h2 className="mt-3 font-display text-4xl font-semibold sm:text-5xl">Vorher. Nachher.</h2>
+          </div>
+          <Link to="/referenzen" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all">
+            Alle Referenzen <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+        <div className="mt-14">
+          <ReferenceCarousel />
         </div>
       </section>
 

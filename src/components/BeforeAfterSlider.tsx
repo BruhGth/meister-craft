@@ -85,6 +85,14 @@ export function BeforeAfterSlider({
         style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
       />
 
+      {/* Subtle bottom gradient for depth + label legibility */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+
+      {/* Slow animated shine sweep */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="animate-image-shine absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+      </div>
+
       {/* Labels */}
       <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-foreground/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-background backdrop-blur">
         Vorher

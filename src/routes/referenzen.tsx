@@ -1,14 +1,9 @@
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
-import facadeBefore from "@/assets/ref-facade-before.jpg";
-import facadeAfter from "@/assets/ref-facade-after.jpg";
-import livingBefore from "@/assets/ref-living-before.jpg";
-import livingAfter from "@/assets/ref-living-after.jpg";
-import stairsBefore from "@/assets/ref-stairs-before.jpg";
-import stairsAfter from "@/assets/ref-stairs-after.jpg";
-import officeBefore from "@/assets/ref-office-before.jpg";
-import officeAfter from "@/assets/ref-office-after.jpg";
+import { referenceProjects } from "@/lib/references";
 
 export const Route = createFileRoute("/referenzen")({
   head: () => ({
@@ -24,48 +19,20 @@ export const Route = createFileRoute("/referenzen")({
         property: "og:description",
         content: "Sehen Sie die Handwerksqualität von Meister Vogel im direkten Vergleich.",
       },
-      { property: "og:image", content: facadeAfter },
+      { property: "og:image", content: referenceProjects[0].after },
     ],
   }),
   component: ReferenzenPage,
 });
 
-const projects = [
-  {
-    title: "Fassadenrenovierung in Berlin-Charlottenburg",
-    desc: "Komplette Sanierung einer Altbaufassade — neuer Putz, frische Beschichtung und akzentuierte Fensterumrandungen.",
-    before: facadeBefore,
-    after: facadeAfter,
-    beforeAlt: "Verwitterte Hausfassade vor der Renovierung",
-    afterAlt: "Frisch gestrichene weiße Hausfassade nach der Renovierung",
-  },
-  {
-    title: "Moderner Innenanstrich — Wohnzimmer",
-    desc: "Alte Mustertapete entfernt, Wände gespachtelt und mit hochwertiger Designerfarbe in tiefem Blau gestrichen.",
-    before: livingBefore,
-    after: livingAfter,
-    beforeAlt: "Wohnzimmer mit alter Blümchentapete",
-    afterAlt: "Modernes Wohnzimmer mit blauer Akzentwand",
-  },
-  {
-    title: "Holztreppe restauriert & lackiert",
-    desc: "Abgeschliffen, grundiert und mit strapazierfähigem Klarlack versiegelt — wie neu, mit erhaltener Holzmaserung.",
-    before: stairsBefore,
-    after: stairsAfter,
-    beforeAlt: "Abgenutzte Holztreppe vor der Restaurierung",
-    afterAlt: "Frisch lackierte Holztreppe nach der Restaurierung",
-  },
-  {
-    title: "Bürorenovierung — Gewerbefläche Mitte",
-    desc: "Aus tristen Büroräumen wurde eine helle, motivierende Arbeitsumgebung mit Akzentstreifen in Unternehmensfarbe.",
-    before: officeBefore,
-    after: officeAfter,
-    beforeAlt: "Leere, abgenutzte Bürofläche vor der Renovierung",
-    afterAlt: "Modern renoviertes Büro mit orangefarbenem Akzentband",
-  },
-];
-
 function ReferenzenPage() {
+  const [index, setIndex] = useState(0);
+  const total = referenceProjects.length;
+  const active = referenceProjects[index];
+
+  const goPrev = () => setIndex((i) => (i - 1 + total) % total);
+  const goNext = () => setIndex((i) => (i + 1) % total);
+
   return (
     <Layout>
       <section className="border-b border-border/60 bg-secondary/40">
@@ -86,30 +53,60 @@ function ReferenzenPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:gap-12">
-          {projects.map((p) => (
-            <figure key={p.title} className="flex flex-col gap-5">
-              <BeforeAfterSlider
-                beforeSrc={p.before}
-                afterSrc={p.after}
-                beforeAlt={p.beforeAlt}
-                afterAlt={p.afterAlt}
-              />
-              <figcaption>
-                <h2 className="font-display text-xl font-semibold text-foreground">
-                  {p.title}
-                </h2>
-                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-                  {p.desc}
-                </p>
-              </figcaption>
-            </figure>
+      <section className="mx-auto max-w-3xl px-6 py-16 lg:py-20">
+        <div className="relative">
+          <figure key={active.title} className="flex flex-col gap-5">
+            <BeforeAfterSlider
+              beforeSrc={active.before}
+              afterSrc={active.after}
+              beforeAlt={active.beforeAlt}
+              afterAlt={active.afterAlt}
+            />
+            <figcaption className="text-center">
+              <h2 className="font-display text-xl font-semibold text-foreground">
+                {active.title}
+              </h2>
+              <p className="mx-auto mt-1.5 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                {active.desc}
+              </p>
+            </figcaption>
+          </figure>
+
+          <button
+            type="button"
+            onClick={goPrev}
+            aria-label="Vorheriges Projekt"
+            className="absolute left-0 top-1/2 -translate-x-3 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-background text-foreground shadow-[var(--shadow-soft)] ring-1 ring-border transition hover:bg-secondary md:-translate-x-5"
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </button>
+          <button
+            type="button"
+            onClick={goNext}
+            aria-label="Nächstes Projekt"
+            className="absolute right-0 top-1/2 translate-x-3 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-background text-foreground shadow-[var(--shadow-soft)] ring-1 ring-border transition hover:bg-secondary md:translate-x-5"
+          >
+            <ChevronRight className="h-4 w-4" />
+          </button>
+        </div>
+
+        <div className="mt-5 flex items-center justify-center gap-2">
+          {referenceProjects.map((p, i) => (
+            <button
+              key={p.title}
+              type="button"
+              onClick={() => setIndex(i)}
+              aria-label={`Projekt ${i + 1} anzeigen`}
+              aria-current={i === index}
+              className={`h-2 rounded-full transition-all ${
+                i === index ? "w-5 bg-[var(--accent)]" : "w-2 bg-border hover:bg-muted-foreground/40"
+              }`}
+            />
           ))}
         </div>
 
-        <p className="mt-16 text-center text-sm text-muted-foreground">
-          Tipp: Regler ziehen oder mit den Pfeiltasten bewegen, um den Vergleich zu
+        <p className="mt-5 text-center text-sm text-muted-foreground">
+          Regler ziehen oder mit den Pfeiltasten bewegen, um den Vergleich zu
           steuern.
         </p>
       </section>
