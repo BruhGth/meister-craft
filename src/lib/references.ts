@@ -7,37 +7,48 @@ import stairsAfter from "@/assets/ref-stairs-after.jpg";
 import officeBefore from "@/assets/ref-office-before.jpg";
 import officeAfter from "@/assets/ref-office-after.jpg";
 
+// Hinweis: Diese Bilder sind Beispiel-/Inspirationsbilder und zeigen keine
+// abgeschlossenen Raumgeschneidert-Projekte. Sie werden durch echte
+// Projektfotos ersetzt, sobald diese vorliegen.
 export const referenceProjects = [
   {
-    title: "Fassadenrenovierung in Berlin-Charlottenburg",
+    category: "Treppenmodernisierung",
+    title: "Treppenmodernisierung (Beispielbild)",
+    desc: "So kann aus einer bestehenden Treppe ein moderner Blickfang werden. Unser eigenes Vinyltreppen-Projekt mit echten Fotos folgt hier in Kürze.",
+    before: stairsBefore,
+    after: stairsAfter,
+    beforeAlt: "Beispielbild: abgenutzte Holztreppe vor der Modernisierung",
+    afterAlt: "Beispielbild: moderne, hochwertig wirkende Treppe nach der Modernisierung",
+    isPlaceholder: true,
+  },
+  {
+    category: "Exklusive Wandgestaltung",
+    title: "Wandgestaltung (Beispielbild)",
+    desc: "Beispiel für hochwertige, individuelle Wandgestaltung mit klarer Akzentfarbe statt klassischer Mustertapete.",
+    before: livingBefore,
+    after: livingAfter,
+    beforeAlt: "Beispielbild: Wohnzimmer mit alter Blümchentapete",
+    afterAlt: "Beispielbild: modernes Wohnzimmer mit blauer Akzentwand",
+    isPlaceholder: true,
+  },
+  {
+    category: "Klassische Malerarbeiten",
+    title: "Fassadengestaltung (Beispielbild)",
     desc: "Komplette Sanierung einer Altbaufassade — neuer Putz, frische Beschichtung und akzentuierte Fensterumrandungen.",
     before: facadeBefore,
     after: facadeAfter,
-    beforeAlt: "Verwitterte Hausfassade vor der Renovierung",
-    afterAlt: "Frisch gestrichene weiße Hausfassade nach der Renovierung",
+    beforeAlt: "Beispielbild: verwitterte Hausfassade vor der Renovierung",
+    afterAlt: "Beispielbild: frisch gestrichene Hausfassade nach der Renovierung",
+    isPlaceholder: true,
   },
   {
-    title: "Moderner Innenanstrich — Wohnzimmer",
-    desc: "Alte Mustertapete entfernt, Wände gespachtelt und mit hochwertiger Designerfarbe in tiefem Blau gestrichen.",
-    before: livingBefore,
-    after: livingAfter,
-    beforeAlt: "Wohnzimmer mit alter Blümchentapete",
-    afterAlt: "Modernes Wohnzimmer mit blauer Akzentwand",
-  },
-  {
-    title: "Holztreppe restauriert & lackiert",
-    desc: "Abgeschliffen, grundiert und mit strapazierfähigem Klarlack versiegelt — wie neu, mit erhaltener Holzmaserung.",
-    before: stairsBefore,
-    after: stairsAfter,
-    beforeAlt: "Abgenutzte Holztreppe vor der Restaurierung",
-    afterAlt: "Frisch lackierte Holztreppe nach der Restaurierung",
-  },
-  {
-    title: "Bürorenovierung — Gewerbefläche Mitte",
-    desc: "Aus tristen Büroräumen wurde eine helle, motivierende Arbeitsumgebung mit Akzentstreifen in Unternehmensfarbe.",
+    category: "Klassische Malerarbeiten",
+    title: "Gewerbefläche (Beispielbild)",
+    desc: "Aus tristen Büroräumen wird eine helle, freundliche Arbeitsumgebung mit klarer Farbakzentuierung.",
     before: officeBefore,
     after: officeAfter,
-    beforeAlt: "Leere, abgenutzte Bürofläche vor der Renovierung",
-    afterAlt: "Modern renoviertes Büro mit orangefarbenem Akzentband",
+    beforeAlt: "Beispielbild: leere, abgenutzte Bürofläche vor der Renovierung",
+    afterAlt: "Beispielbild: modern renoviertes Büro mit Akzentwand",
+    isPlaceholder: true,
   },
 ] as const;

@@ -101,7 +101,8 @@ export function ReferenceCarousel() {
       </div>
 
       <div className="mx-auto mt-6 max-w-xl text-center">
-        <h3 className="font-display text-xl font-semibold text-foreground">{active.title}</h3>
+        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent)]">{active.category}</span>
+        <h3 className="mt-1.5 font-display text-xl font-semibold text-foreground">{active.title}</h3>
         <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{active.desc}</p>
       </div>
 

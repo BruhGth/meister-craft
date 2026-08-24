@@ -17,7 +17,7 @@ export function SiteFooter() {
               </div>
             </div>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
-              Ihr zertifizierter Meisterbetrieb für hochwertige Maler- und Lackierarbeiten in Fellbach und Umgebung. Tradition trifft Präzision.
+              Malermeisterbetrieb für Innenraumgestaltung in Fellbach und Umgebung — von der Treppenmodernisierung bis zur klassischen Malerarbeit.
             </p>
           </div>
 
@@ -25,6 +25,7 @@ export function SiteFooter() {
             <h4 className="font-display text-sm font-semibold tracking-wide">Navigation</h4>
             <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
               <li><Link to="/leistungen" className="hover:text-foreground">Leistungen</Link></li>
+              <li><Link to="/referenzen" className="hover:text-foreground">Projekte</Link></li>
               <li><Link to="/ueber-uns" className="hover:text-foreground">Über uns</Link></li>
               <li><Link to="/kontakt" className="hover:text-foreground">Kontakt</Link></li>
             </ul>
@@ -33,7 +34,7 @@ export function SiteFooter() {
           <div>
             <h4 className="font-display text-sm font-semibold tracking-wide">Kontakt</h4>
             <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
-              <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5 text-primary" /> +49 000 000</li>
+              <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5 text-primary" /> 0176 2098856</li>
               <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 text-primary" /> info@raumgeschneidert.de</li>
               <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-primary" /> Hofmauerweg 19, 70734 Fellbach</li>
             </ul>

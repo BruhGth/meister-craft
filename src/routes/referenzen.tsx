@@ -8,16 +8,16 @@ import { referenceProjects } from "@/lib/references";
 export const Route = createFileRoute("/referenzen")({
   head: () => ({
     meta: [
-      { title: "Referenzen — Malermeister Vogel" },
+      { title: "Projekte — Raumgeschneidert" },
       {
         name: "description",
         content:
-          "Vorher-Nachher-Vergleiche unserer Maler- und Lackierprojekte: Fassaden, Innenräume, Treppen und Gewerbeflächen.",
+          "Raumverwandlungen im Vorher-Nachher-Vergleich: Treppenmodernisierung, Wandgestaltung, Fassaden und mehr.",
       },
-      { property: "og:title", content: "Referenzen — Vorher / Nachher" },
+      { property: "og:title", content: "Projekte — Vorher / Nachher" },
       {
         property: "og:description",
-        content: "Sehen Sie die Handwerksqualität von Meister Vogel im direkten Vergleich.",
+        content: "Raumverwandlungen mit handwerklicher Präzision im direkten Vergleich.",
       },
       { property: "og:image", content: referenceProjects[0].after },
     ],
@@ -38,17 +38,21 @@ function ReferenzenPage() {
       <section className="border-b border-border/60 bg-secondary/40">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent)]">
-            Referenzen
+            Projekte
           </p>
           <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
             Vorher. Nachher.
             <br />
-            <span className="text-muted-foreground">Handwerk, das man sieht.</span>
+            <span className="text-muted-foreground">Raumgeschneidert.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-            Ziehen Sie den Regler und vergleichen Sie ausgewählte Projekte aus den
-            letzten Jahren. Vom Altbau bis zur Gewerbefläche — jedes Detail von Hand
-            ausgeführt.
+            Ziehen Sie den Regler und vergleichen Sie Raumverwandlungen. Ausführliche
+            Projektseiten mit Idee, Umsetzung und Ergebnis folgen hier nach und nach.
+          </p>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            Hinweis: Die gezeigten Bilder sind aktuell Beispiel-/Inspirationsbilder und
+            zeigen keine abgeschlossenen Raumgeschneidert-Projekte. Echte Projektfotos
+            folgen, sobald sie verfügbar sind.
           </p>
         </div>
       </section>
@@ -63,7 +67,10 @@ function ReferenzenPage() {
               afterAlt={active.afterAlt}
             />
             <figcaption className="text-center">
-              <h2 className="font-display text-xl font-semibold text-foreground">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent)]">
+                {active.category}
+              </span>
+              <h2 className="mt-1.5 font-display text-xl font-semibold text-foreground">
                 {active.title}
               </h2>
               <p className="mx-auto mt-1.5 max-w-xl text-sm leading-relaxed text-muted-foreground">

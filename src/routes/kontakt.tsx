@@ -6,10 +6,10 @@ import { useState } from "react";
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
     meta: [
-      { title: "Kontakt — Malermeister Vogel" },
-      { name: "description", content: "Kontaktieren Sie Malermeister Vogel für ein unverbindliches Angebot. Telefon, E-Mail oder über das Formular." },
-      { property: "og:title", content: "Kontakt — Meister Vogel" },
-      { property: "og:description", content: "Jetzt Angebot anfragen — Antwort innerhalb von 24 Stunden." },
+      { title: "Kontakt — Raumgeschneidert" },
+      { name: "description", content: "Kontaktieren Sie Raumgeschneidert für eine unverbindliche Beratung. Telefon, E-Mail oder über das Formular." },
+      { property: "og:title", content: "Kontakt — Raumgeschneidert" },
+      { property: "og:description", content: "Jetzt Beratung anfragen." },
     ],
   }),
   component: ContactPage,
@@ -25,7 +25,7 @@ function ContactPage() {
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Kontakt</span>
           <h1 className="mt-4 font-display text-5xl font-semibold sm:text-6xl">Lassen Sie uns sprechen.</h1>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
-            Egal ob kleine Renovierung oder großes Projekt — wir freuen uns auf Ihre Anfrage und melden uns innerhalb von 24 Stunden.
+            Egal ob kleine Renovierung oder größeres Gestaltungsprojekt — wir freuen uns auf Ihre Anfrage.
           </p>
         </div>
       </section>
@@ -39,10 +39,10 @@ function ContactPage() {
 
             <div className="mt-8 space-y-5">
               {[
-                { icon: Phone, label: "Telefon", val: "+49 000 000", href: "tel:+49000000" },
+                { icon: Phone, label: "Telefon", val: "0176 2098856", href: "tel:+491762098856" },
                 { icon: Mail, label: "E-Mail", val: "info@raumgeschneidert.de", href: "mailto:info@raumgeschneidert.de" },
                 { icon: MapPin, label: "Adresse", val: "Hofmauerweg 19, 70734 Fellbach" },
-                { icon: Clock, label: "Öffnungszeiten", val: "Mo–Fr 7:30 – 17:00 Uhr" },
+                { icon: Clock, label: "Erreichbarkeit", val: "Nach Vereinbarung" },
               ].map((c) => {
                 const Inner = (
                   <div className="flex items-start gap-4">
@@ -65,7 +65,7 @@ function ContactPage() {
               })}
             </div>
 
-            <a href="tel:+4930123456789" className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-7 py-4 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-elegant)] hover:-translate-y-0.5 transition-transform">
+            <a href="tel:+491762098856" className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-7 py-4 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-elegant)] hover:-translate-y-0.5 transition-transform">
               <Phone className="h-4 w-4" /> Jetzt anrufen
             </a>
           </div>
@@ -79,7 +79,7 @@ function ContactPage() {
                     <CheckCircle2 className="h-8 w-8" />
                   </div>
                   <h3 className="mt-6 font-display text-2xl font-semibold">Vielen Dank!</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">Ihre Anfrage ist bei uns eingegangen. Wir melden uns innerhalb von 24 Stunden.</p>
+                  <p className="mt-2 text-sm text-muted-foreground">Ihre Anfrage ist bei uns eingegangen. Wir melden uns bei Ihnen.</p>
                 </div>
               ) : (
                 <form

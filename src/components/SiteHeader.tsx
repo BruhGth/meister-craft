@@ -5,7 +5,7 @@ import { Menu, X, Phone, PaintRoller } from "lucide-react";
 const nav = [
   { to: "/", label: "Start" },
   { to: "/leistungen", label: "Leistungen" },
-  { to: "/referenzen", label: "Referenzen" },
+  { to: "/referenzen", label: "Projekte" },
   { to: "/ueber-uns", label: "Über uns" },
   { to: "/kontakt", label: "Kontakt" },
 ];
@@ -41,10 +41,10 @@ export function SiteHeader() {
 
         <div className="hidden md:flex">
           <a
-            href="tel:+4930123456789"
+            href="tel:+491762098856"
             className="inline-flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background transition-transform hover:-translate-y-0.5"
           >
-            <Phone className="h-4 w-4" /> +49 000 000
+            <Phone className="h-4 w-4" /> 0176 2098856
           </a>
         </div>
 
@@ -73,7 +73,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <a
-              href="tel:+49000000"
+              href="tel:+491762098856"
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-4 py-3 text-sm font-medium text-background"
             >
               <Phone className="h-4 w-4" /> Jetzt anrufen
