@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { sendContactRequest } from "@/lib/contact-server-fn";
 
 export const Route = createFileRoute("/kontakt")({
   head: () => ({
@@ -17,6 +18,35 @@ export const Route = createFileRoute("/kontakt")({
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError(null);
+    setSending(true);
+
+    const form = new FormData(e.currentTarget);
+    const data = {
+      name: String(form.get("name") ?? ""),
+      email: String(form.get("email") ?? ""),
+      phone: String(form.get("phone") ?? "") || undefined,
+      message: String(form.get("message") ?? ""),
+    };
+
+    try {
+      await sendContactRequest({ data });
+      setSent(true);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder rufen Sie uns an.",
+      );
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <Layout>
@@ -82,10 +112,7 @@ function ContactPage() {
                   <p className="mt-2 text-sm text-muted-foreground">Ihre Anfrage ist bei uns eingegangen. Wir melden uns bei Ihnen.</p>
                 </div>
               ) : (
-                <form
-                  onSubmit={(e) => { e.preventDefault(); setSent(true); }}
-                  className="space-y-5"
-                >
+                <form onSubmit={handleSubmit} className="space-y-5">
                   <h2 className="font-display text-2xl font-semibold">Angebot anfragen</h2>
                   <div className="grid gap-5 sm:grid-cols-2">
                     <Field label="Name" name="name" required />
@@ -102,11 +129,26 @@ function ContactPage() {
                       className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
                     />
                   </div>
+                  {error && (
+                    <div className="flex items-start gap-2.5 rounded-xl border border-destructive/30 bg-destructive/5 p-4 text-sm text-destructive">
+                      <AlertCircle className="mt-0.5 h-4 w-4 flex-shrink-0" />
+                      <span>{error}</span>
+                    </div>
+                  )}
                   <button
                     type="submit"
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-foreground px-7 py-4 text-sm font-semibold text-background hover:-translate-y-0.5 transition-transform sm:w-auto"
+                    disabled={sending}
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-foreground px-7 py-4 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5 disabled:pointer-events-none disabled:opacity-60 sm:w-auto"
                   >
-                    Anfrage senden <Send className="h-4 w-4" />
+                    {sending ? (
+                      <>
+                        Wird gesendet <Loader2 className="h-4 w-4 animate-spin" />
+                      </>
+                    ) : (
+                      <>
+                        Anfrage senden <Send className="h-4 w-4" />
+                      </>
+                    )}
                   </button>
                   <p className="text-xs text-muted-foreground">Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu.</p>
                 </form>
