@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { PaintRoller, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo-badge.png";
 
 export function SiteFooter() {
   return (
@@ -7,14 +8,9 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2.5">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[image:var(--gradient-accent)] text-primary-foreground">
-                <PaintRoller className="h-5 w-5" />
-              </div>
-              <div className="leading-tight">
-                <div className="font-display text-lg font-semibold">Raumgeschneidert</div>
-                <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Malermeister & Lackierer</div>
-              </div>
+            <div className="flex flex-wrap items-center gap-3">
+              <img src={logo} alt="Raumgeschneidert" className="h-8 w-auto rounded-md sm:h-9" />
+              <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Malermeister & Lackierer</div>
             </div>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-muted-foreground">
               Malermeisterbetrieb für Innenraumgestaltung in Fellbach und Umgebung — von der Treppenmodernisierung bis zur klassischen Malerarbeit.
