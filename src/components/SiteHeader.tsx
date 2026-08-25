@@ -7,6 +7,7 @@ const nav = [
   { to: "/leistungen", label: "Leistungen" },
   { to: "/referenzen", label: "Projekte" },
   { to: "/ueber-uns", label: "Über uns" },
+  { to: "/zertifikate", label: "Zertifikate" },
   { to: "/kontakt", label: "Kontakt" },
 ];
 

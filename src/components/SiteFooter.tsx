@@ -27,6 +27,7 @@ export function SiteFooter() {
               <li><Link to="/leistungen" className="hover:text-foreground">Leistungen</Link></li>
               <li><Link to="/referenzen" className="hover:text-foreground">Projekte</Link></li>
               <li><Link to="/ueber-uns" className="hover:text-foreground">Über uns</Link></li>
+              <li><Link to="/zertifikate" className="hover:text-foreground">Zertifikate</Link></li>
               <li><Link to="/kontakt" className="hover:text-foreground">Kontakt</Link></li>
             </ul>
           </div>

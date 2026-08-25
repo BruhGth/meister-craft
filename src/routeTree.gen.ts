@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ZertifikateRouteImport } from './routes/zertifikate'
 import { Route as UeberUnsRouteImport } from './routes/ueber-uns'
 import { Route as ReferenzenRouteImport } from './routes/referenzen'
 import { Route as LeistungenRouteImport } from './routes/leistungen'
@@ -17,6 +18,11 @@ import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ZertifikateRoute = ZertifikateRouteImport.update({
+  id: '/zertifikate',
+  path: '/zertifikate',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const UeberUnsRoute = UeberUnsRouteImport.update({
   id: '/ueber-uns',
   path: '/ueber-uns',
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/leistungen': typeof LeistungenRoute
   '/referenzen': typeof ReferenzenRoute
   '/ueber-uns': typeof UeberUnsRoute
+  '/zertifikate': typeof ZertifikateRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByTo {
   '/leistungen': typeof LeistungenRoute
   '/referenzen': typeof ReferenzenRoute
   '/ueber-uns': typeof UeberUnsRoute
+  '/zertifikate': typeof ZertifikateRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +88,7 @@ export interface FileRoutesById {
   '/leistungen': typeof LeistungenRoute
   '/referenzen': typeof ReferenzenRoute
   '/ueber-uns': typeof UeberUnsRoute
+  '/zertifikate': typeof ZertifikateRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +100,7 @@ export interface FileRouteTypes {
     | '/leistungen'
     | '/referenzen'
     | '/ueber-uns'
+    | '/zertifikate'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/leistungen'
     | '/referenzen'
     | '/ueber-uns'
+    | '/zertifikate'
   id:
     | '__root__'
     | '/'
@@ -109,6 +120,7 @@ export interface FileRouteTypes {
     | '/leistungen'
     | '/referenzen'
     | '/ueber-uns'
+    | '/zertifikate'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -119,10 +131,18 @@ export interface RootRouteChildren {
   LeistungenRoute: typeof LeistungenRoute
   ReferenzenRoute: typeof ReferenzenRoute
   UeberUnsRoute: typeof UeberUnsRoute
+  ZertifikateRoute: typeof ZertifikateRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/zertifikate': {
+      id: '/zertifikate'
+      path: '/zertifikate'
+      fullPath: '/zertifikate'
+      preLoaderRoute: typeof ZertifikateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ueber-uns': {
       id: '/ueber-uns'
       path: '/ueber-uns'
@@ -183,6 +203,7 @@ const rootRouteChildren: RootRouteChildren = {
   LeistungenRoute: LeistungenRoute,
   ReferenzenRoute: ReferenzenRoute,
   UeberUnsRoute: UeberUnsRoute,
+  ZertifikateRoute: ZertifikateRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

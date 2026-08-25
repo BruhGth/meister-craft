@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
         content:
           "Hochwertige Innenraumgestaltung mit handwerklicher Präzision: Treppenmodernisierung, exklusive Wandgestaltung, Lackierungen und klassische Malerarbeiten aus Fellbach.",
       },
-      { property: "og:title", content: "Raumgeschneidert — Wir verändern Räume" },
+      { property: "og:title", content: "Raumgeschneidert — Räume mit Charakter" },
       { property: "og:description", content: "Innenraumgestaltung mit handwerklicher Präzision und gestalterischem Anspruch." },
     ],
   }),
@@ -52,7 +52,7 @@ function HomePage() {
             <Award className="h-3.5 w-3.5 text-accent" /> Meisterbetrieb für Innenraumgestaltung
           </span>
           <h1 className="mt-8 max-w-3xl font-display text-5xl font-semibold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
-            Wir verändern <span className="text-accent">Räume.</span>
+            Räume mit <span className="text-accent">Charakter.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
             Hochwertige Innenraumgestaltung mit handwerklicher Präzision und gestalterischem Anspruch — von der Treppenmodernisierung bis zur exklusiven Wandgestaltung.
