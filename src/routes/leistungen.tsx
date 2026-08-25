@@ -37,12 +37,12 @@ function ServicesPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-20">
         {/* Featured: Treppenmodernisierung */}
-        <div className="rounded-3xl border border-primary/30 bg-[image:var(--gradient-accent)] p-8 text-primary-foreground shadow-[var(--shadow-elegant)] sm:p-12">
+        <div className="overflow-hidden rounded-3xl border border-primary/30 bg-[image:var(--gradient-accent)] p-6 text-primary-foreground shadow-[var(--shadow-elegant)] sm:p-12">
           <span className="text-xs font-semibold uppercase tracking-[0.22em] text-primary-foreground/70">{featured.number} · Besonders hervorgehoben</span>
           <div className="mt-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/15">
             <featured.icon className="h-7 w-7" />
           </div>
-          <h2 className="mt-6 font-display text-3xl font-semibold sm:text-4xl">{featured.title}</h2>
+          <h2 className="mt-6 break-words font-display text-2xl font-semibold hyphens-auto sm:text-4xl">{featured.title}</h2>
           <p className="mt-2 text-base font-medium text-primary-foreground/90">{featured.tagline}</p>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-primary-foreground/80">{featured.desc}</p>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-primary-foreground/70">
@@ -65,7 +65,7 @@ function ServicesPage() {
               <div className="mt-4 flex h-14 w-14 items-center justify-center rounded-xl bg-secondary text-primary group-hover:bg-[image:var(--gradient-accent)] group-hover:text-primary-foreground transition-all">
                 <s.icon className="h-7 w-7" />
               </div>
-              <h2 className="mt-6 font-display text-2xl font-semibold">{s.title}</h2>
+              <h2 className="mt-6 break-words font-display text-2xl font-semibold">{s.title}</h2>
               <p className="mt-2 text-sm font-medium text-foreground/80">{s.tagline}</p>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
             </div>

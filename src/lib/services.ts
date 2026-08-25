@@ -4,7 +4,7 @@ export const services = [
   {
     number: "01",
     icon: TrendingUp,
-    title: "Treppenmodernisierung",
+    title: "Treppen­modernisierung",
     tagline: "Aus einer bestehenden Treppe wird ein moderner Blickfang.",
     desc: "Statt kompletter Neuanschaffung erhält Ihre bestehende Treppe eine individuell angefertigte, hochwertige Oberfläche — für ein modernes Ergebnis, das aus einem Guss wirkt.",
     featured: true,

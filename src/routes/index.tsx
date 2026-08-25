@@ -104,13 +104,13 @@ function HomePage() {
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           <Link
             to="/leistungen"
-            className="group relative overflow-hidden rounded-2xl border border-primary/30 bg-[image:var(--gradient-accent)] p-8 text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform hover:-translate-y-1 lg:col-span-2 lg:row-span-1"
+            className="group relative overflow-hidden rounded-2xl border border-primary/30 bg-[image:var(--gradient-accent)] p-6 text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform hover:-translate-y-1 sm:p-8 lg:col-span-2 lg:row-span-1"
           >
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary-foreground/70">{services[0].number}</span>
             <div className="mt-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/15">
               <FeaturedIcon className="h-6 w-6" />
             </div>
-            <h3 className="mt-6 font-display text-2xl font-semibold">{services[0].title}</h3>
+            <h3 className="mt-6 break-words font-display text-xl font-semibold hyphens-auto sm:text-2xl">{services[0].title}</h3>
             <p className="mt-2 text-sm font-medium text-primary-foreground/90">{services[0].tagline}</p>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-primary-foreground/75">{services[0].desc}</p>
           </Link>
@@ -121,7 +121,7 @@ function HomePage() {
               <div className="mt-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-primary group-hover:bg-[image:var(--gradient-accent)] group-hover:text-primary-foreground transition-all">
                 <s.icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-6 font-display text-xl font-semibold">{s.title}</h3>
+              <h3 className="mt-6 break-words font-display text-xl font-semibold">{s.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.tagline}</p>
             </div>
           ))}
@@ -132,7 +132,7 @@ function HomePage() {
               <div className="mt-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary text-primary group-hover:bg-[image:var(--gradient-accent)] group-hover:text-primary-foreground transition-all">
                 <s.icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-6 font-display text-xl font-semibold">{s.title}</h3>
+              <h3 className="mt-6 break-words font-display text-xl font-semibold">{s.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.tagline}</p>
             </div>
           ))}
