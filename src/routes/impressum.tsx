@@ -44,13 +44,6 @@ function ImpressumPage() {
             <h2 className="font-display text-lg font-semibold text-foreground">Aufsichtsbehörde</h2>
             <p className="mt-3">Handwerkskammer Stuttgart, Heilbronner Str. 43, 70191 Stuttgart</p>
           </div>
-          <div>
-            <h2 className="font-display text-lg font-semibold text-foreground">Verbraucherstreitbeilegung</h2>
-            <p className="mt-3">
-              Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer
-              Verbraucherschlichtungsstelle teilzunehmen.
-            </p>
-          </div>
         </div>
       </section>
     </Layout>
