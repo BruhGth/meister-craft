@@ -2,8 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { ReferenceCarousel } from "@/components/ReferenceCarousel";
 import { services } from "@/lib/services";
-import { ArrowRight, Award, GraduationCap, Sparkles, Wand2, Phone, Palette } from "lucide-react";
-import heroImg from "@/assets/ref-living-after.jpg";
+import { values } from "@/lib/values";
+import { ArrowRight, Award, GraduationCap, Sparkles, Wand2, Phone } from "lucide-react";
+import heroImg from "@/assets/ref-office-after.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,13 +29,6 @@ const trustPoints = [
   { icon: Wand2, label: "Individuelle Raumgestaltung" },
 ];
 
-const whyUs = [
-  { icon: Award, title: "Meisterbetrieb", desc: "Fundiertes handwerkliches Wissen und fachgerechte Ausführung." },
-  { icon: GraduationCap, title: "Staatlich geprüfter Gestalter", desc: "Gestalterischer Anspruch zusätzlich zum klassischen Handwerk." },
-  { icon: Wand2, title: "Individuelle Beratung", desc: "Nicht einfach eine Standardfarbe auswählen, sondern gemeinsam eine passende Lösung entwickeln." },
-  { icon: Sparkles, title: "Weiterbildung", desc: "Bereits umfangreiche Hersteller- und Technikseminare besucht." },
-  { icon: Palette, title: "Liebe zum Detail", desc: "Besonderer Anspruch an Oberfläche, Übergänge und Ausführung." },
-];
 
 function HomePage() {
   const FeaturedIcon = services[0].icon;
@@ -44,7 +38,7 @@ function HomePage() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImg} alt="Beispielbild: hochwertig gestalteter Wohnraum" className="h-full w-full object-cover" width={1280} height={896} />
+          <img src={heroImg} alt="Beispielbild: hochwertig gestalteter Innenraum" className="h-full w-full object-cover" width={1280} height={896} />
           <div className="absolute inset-0 bg-[image:var(--gradient-hero)]" />
         </div>
         <div className="relative mx-auto flex max-w-7xl flex-col px-6 pt-28 pb-32 lg:pt-40 lg:pb-44">
@@ -94,7 +88,7 @@ function HomePage() {
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-2xl">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Leistungen</span>
-            <h2 className="mt-3 font-display text-4xl font-semibold sm:text-5xl">Gestaltung, die Räume verändert</h2>
+            <h2 className="mt-3 font-display text-4xl font-semibold sm:text-5xl">Gestaltung, die Räume verändert.</h2>
           </div>
           <Link to="/leistungen" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all">
             Alle Leistungen <ArrowRight className="h-4 w-4" />
@@ -170,7 +164,7 @@ function HomePage() {
           </div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-            {whyUs.map((w) => (
+            {values.map((w) => (
               <div key={w.title} className="rounded-2xl border border-border bg-card p-6">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[image:var(--gradient-accent)] text-primary-foreground">
                   <w.icon className="h-5 w-5" />

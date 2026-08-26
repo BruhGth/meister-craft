@@ -1,11 +1,15 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
+// Header-Felder (Betreff, Absender) dürfen keine Zeilenumbrüche enthalten,
+// sonst wäre eine Header-Injection über das Formular möglich.
+const singleLine = (value: string) => value.replace(/[\r\n]+/g, " ").trim();
+
 const contactSchema = z.object({
-  name: z.string().min(1, "Name ist erforderlich"),
-  email: z.string().email("Ungültige E-Mail-Adresse"),
-  phone: z.string().optional(),
-  message: z.string().min(1, "Nachricht ist erforderlich"),
+  name: z.string().min(1, "Name ist erforderlich").max(200).transform(singleLine),
+  email: z.string().email("Ungültige E-Mail-Adresse").max(320).transform(singleLine),
+  phone: z.string().max(50).transform(singleLine).optional(),
+  message: z.string().min(1, "Nachricht ist erforderlich").max(5000),
 });
 
 export const sendContactRequest = createServerFn({ method: "POST" })

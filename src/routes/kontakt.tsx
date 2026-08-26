@@ -27,6 +27,14 @@ function ContactPage() {
     setSending(true);
 
     const form = new FormData(e.currentTarget);
+
+    // Honeypot: real visitors never fill this hidden field, bots often do.
+    if (String(form.get("website") ?? "")) {
+      setSending(false);
+      setSent(true);
+      return;
+    }
+
     const data = {
       name: String(form.get("name") ?? ""),
       email: String(form.get("email") ?? ""),
@@ -120,14 +128,19 @@ function ContactPage() {
                   </div>
                   <Field label="Telefon (optional)" name="phone" type="tel" />
                   <div>
-                    <label className="block text-sm font-medium text-foreground">Ihre Nachricht</label>
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground">Ihre Nachricht</label>
                     <textarea
+                      id="message"
                       name="message"
                       required
                       rows={6}
                       placeholder="Beschreiben Sie Ihr Projekt — Räume, Fläche, gewünschter Termin..."
                       className="mt-2 w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
                     />
+                  </div>
+                  <div className="hidden" aria-hidden="true">
+                    <label htmlFor="website">Website</label>
+                    <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
                   </div>
                   {error && (
                     <div className="flex items-start gap-2.5 rounded-xl border border-destructive/30 bg-destructive/5 p-4 text-sm text-destructive">
@@ -164,8 +177,9 @@ function ContactPage() {
 function Field({ label, name, type = "text", required }: { label: string; name: string; type?: string; required?: boolean }) {
   return (
     <div>
-      <label className="block text-sm font-medium text-foreground">{label}</label>
+      <label htmlFor={name} className="block text-sm font-medium text-foreground">{label}</label>
       <input
+        id={name}
         type={type}
         name={name}
         required={required}

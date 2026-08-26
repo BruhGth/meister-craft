@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
-import { Award, GraduationCap, Wand2, Sparkles, Palette, ArrowRight } from "lucide-react";
+import { Palette, ArrowRight } from "lucide-react";
+import { values } from "@/lib/values";
 
 export const Route = createFileRoute("/ueber-uns")({
   head: () => ({
@@ -14,13 +15,6 @@ export const Route = createFileRoute("/ueber-uns")({
   component: AboutPage,
 });
 
-const values = [
-  { icon: Award, title: "Meisterbetrieb", desc: "Fundiertes handwerkliches Wissen und fachgerechte Ausführung." },
-  { icon: GraduationCap, title: "Staatlich geprüfter Gestalter", desc: "Gestalterischer Anspruch zusätzlich zum klassischen Handwerk." },
-  { icon: Wand2, title: "Individuelle Beratung", desc: "Nicht einfach eine Standardfarbe auswählen, sondern gemeinsam eine passende Lösung entwickeln." },
-  { icon: Sparkles, title: "Weiterbildung", desc: "Bereits umfangreiche Hersteller- und Technikseminare besucht." },
-  { icon: Palette, title: "Liebe zum Detail", desc: "Besonderer Anspruch an Oberfläche, Übergänge und Ausführung." },
-];
 
 function AboutPage() {
   return (

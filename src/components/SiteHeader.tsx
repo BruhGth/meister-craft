@@ -17,7 +17,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center gap-3 group">
+        <Link to="/" onClick={() => setOpen(false)} className="flex items-center gap-3 group">
           <img src={logo} alt="Raumgeschneidert" className="h-8 w-auto rounded-md shadow-[var(--shadow-soft)] sm:h-9" />
           <div className="hidden text-[11px] uppercase tracking-[0.18em] text-muted-foreground sm:block">
             Malermeister & Lackierer
@@ -51,6 +51,7 @@ export function SiteHeader() {
           className="md:hidden p-2 text-foreground"
           onClick={() => setOpen(!open)}
           aria-label="Menü"
+          aria-expanded={open}
         >
           {open ? <X /> : <Menu />}
         </button>
@@ -73,6 +74,7 @@ export function SiteHeader() {
             ))}
             <a
               href="tel:+491762098856"
+              onClick={() => setOpen(false)}
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-4 py-3 text-sm font-medium text-background"
             >
               <Phone className="h-4 w-4" /> Jetzt anrufen

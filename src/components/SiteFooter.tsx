@@ -31,8 +31,8 @@ export function SiteFooter() {
           <div>
             <h4 className="font-display text-sm font-semibold tracking-wide">Kontakt</h4>
             <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
-              <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5 text-primary" /> 0176 2098856</li>
-              <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 text-primary" /> info@raumgeschneidert.de</li>
+              <li className="flex items-start gap-2"><Phone className="h-4 w-4 mt-0.5 text-primary" /> <a href="tel:+491762098856" className="hover:text-foreground">0176 2098856</a></li>
+              <li className="flex items-start gap-2"><Mail className="h-4 w-4 mt-0.5 text-primary" /> <a href="mailto:info@raumgeschneidert.de" className="hover:text-foreground">info@raumgeschneidert.de</a></li>
               <li className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-0.5 text-primary" /> Hofmauerweg 19, 70734 Fellbach</li>
             </ul>
           </div>
