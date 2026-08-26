@@ -4,6 +4,8 @@ import livingBefore from "@/assets/ref-living-before.jpg";
 import livingAfter from "@/assets/ref-living-after.jpg";
 import stairsRealBefore from "@/assets/ref-stairs-real-before.jpg";
 import stairsRealAfter from "@/assets/ref-stairs-real-after.jpg";
+import stairs2RealBefore from "@/assets/ref-stairs2-real-before.jpg";
+import stairs2RealAfter from "@/assets/ref-stairs2-real-after.jpg";
 import officeBefore from "@/assets/ref-office-before.jpg";
 import officeAfter from "@/assets/ref-office-after.jpg";
 
@@ -22,6 +24,17 @@ export const referenceProjects = [
     afterAlt: "Fertig verkleidete Treppe mit heller Vinyl-Holzoptik",
     isPlaceholder: false,
     aspect: "aspect-[3/4]",
+  },
+  {
+    category: "Treppenmodernisierung",
+    title: "Treppenmodernisierung mit Geländer",
+    desc: "Neben der neuen Vinyloberfläche in dunkler Holzoptik wurde hier auch das historische Geländer aufgearbeitet und frisch weiß gestrichen — für einen stimmigen Gesamtlook.",
+    before: stairs2RealBefore,
+    after: stairs2RealAfter,
+    beforeAlt: "Treppe mit abgenutztem Anstrich und altem Belag vor der Modernisierung",
+    afterAlt: "Modernisierte Treppe mit dunkler Vinyloptik und frisch gestrichenem Geländer",
+    isPlaceholder: false,
+    aspect: "aspect-[4/3]",
   },
   {
     category: "Exklusive Wandgestaltung",

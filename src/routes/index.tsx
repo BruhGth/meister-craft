@@ -150,9 +150,9 @@ function HomePage() {
             gewöhnlichen oder veralteten Treppe ein moderner Blickfang.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Die Treppenmodernisierung zeigt unser eigenes, abgeschlossenes Projekt. Die übrigen
-            Bilder sind aktuell Beispiel-/Inspirationsbilder und zeigen keine abgeschlossenen
-            Raumgeschneidert-Projekte — echte Projektfotos folgen dort nach und nach.
+            Die beiden Treppenmodernisierungen zeigen unsere eigenen, abgeschlossenen Projekte.
+            Die übrigen Bilder sind aktuell Beispiel-/Inspirationsbilder und zeigen keine
+            abgeschlossenen Raumgeschneidert-Projekte — echte Projektfotos folgen dort nach und nach.
           </p>
         </div>
 

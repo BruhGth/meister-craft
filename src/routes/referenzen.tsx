@@ -50,10 +50,10 @@ function ReferenzenPage() {
             Projektseiten mit Idee, Umsetzung und Ergebnis folgen hier nach und nach.
           </p>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            Hinweis: Die Treppenmodernisierung zeigt unser eigenes, abgeschlossenes
-            Projekt. Die übrigen Bilder sind aktuell Beispiel-/Inspirationsbilder und
-            zeigen keine abgeschlossenen Raumgeschneidert-Projekte — echte Projektfotos
-            folgen dort, sobald sie verfügbar sind.
+            Hinweis: Die beiden Treppenmodernisierungen zeigen unsere eigenen,
+            abgeschlossenen Projekte. Die übrigen Bilder sind aktuell Beispiel-/
+            Inspirationsbilder und zeigen keine abgeschlossenen Raumgeschneidert-Projekte
+            — echte Projektfotos folgen dort, sobald sie verfügbar sind.
           </p>
         </div>
       </section>
