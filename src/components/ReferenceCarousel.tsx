@@ -70,6 +70,7 @@ export function ReferenceCarousel() {
                     afterSrc={p.after}
                     beforeAlt={p.beforeAlt}
                     afterAlt={p.afterAlt}
+                    aspectClassName={p.aspect}
                   />
                 </div>
               </div>

@@ -150,9 +150,9 @@ function HomePage() {
             gewöhnlichen oder veralteten Treppe ein moderner Blickfang.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            Die unten gezeigten Bilder sind Beispiel-/Inspirationsbilder und zeigen keine abgeschlossenen
-            Raumgeschneidert-Projekte. Echte Projektfotos, u. a. unserer eigenen Vinyltreppen-Modernisierung,
-            folgen hier in Kürze.
+            Die Treppenmodernisierung zeigt unser eigenes, abgeschlossenes Projekt. Die übrigen
+            Bilder sind aktuell Beispiel-/Inspirationsbilder und zeigen keine abgeschlossenen
+            Raumgeschneidert-Projekte — echte Projektfotos folgen dort nach und nach.
           </p>
         </div>
 

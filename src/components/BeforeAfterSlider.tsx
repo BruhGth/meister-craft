@@ -7,6 +7,7 @@ interface BeforeAfterSliderProps {
   beforeAlt: string;
   afterAlt: string;
   initial?: number;
+  aspectClassName?: string;
 }
 
 export function BeforeAfterSlider({
@@ -15,6 +16,7 @@ export function BeforeAfterSlider({
   beforeAlt,
   afterAlt,
   initial = 50,
+  aspectClassName = "aspect-[4/3]",
 }: BeforeAfterSliderProps) {
   const [pos, setPos] = useState(initial);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -61,7 +63,7 @@ export function BeforeAfterSlider({
     <div
       ref={containerRef}
       onPointerDown={startDrag}
-      className="group relative aspect-[4/3] w-full select-none overflow-hidden rounded-2xl bg-muted shadow-[var(--shadow-soft)] ring-1 ring-border touch-none cursor-ew-resize"
+      className={`group relative ${aspectClassName} w-full select-none overflow-hidden rounded-2xl bg-muted shadow-[var(--shadow-soft)] ring-1 ring-border touch-none cursor-ew-resize`}
     >
       {/* After (base) */}
       <img

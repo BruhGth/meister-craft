@@ -50,9 +50,10 @@ function ReferenzenPage() {
             Projektseiten mit Idee, Umsetzung und Ergebnis folgen hier nach und nach.
           </p>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-            Hinweis: Die gezeigten Bilder sind aktuell Beispiel-/Inspirationsbilder und
-            zeigen keine abgeschlossenen Raumgeschneidert-Projekte. Echte Projektfotos
-            folgen, sobald sie verfügbar sind.
+            Hinweis: Die Treppenmodernisierung zeigt unser eigenes, abgeschlossenes
+            Projekt. Die übrigen Bilder sind aktuell Beispiel-/Inspirationsbilder und
+            zeigen keine abgeschlossenen Raumgeschneidert-Projekte — echte Projektfotos
+            folgen dort, sobald sie verfügbar sind.
           </p>
         </div>
       </section>
@@ -65,6 +66,7 @@ function ReferenzenPage() {
               afterSrc={active.after}
               beforeAlt={active.beforeAlt}
               afterAlt={active.afterAlt}
+              aspectClassName={active.aspect}
             />
             <figcaption className="text-center">
               <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent)]">

@@ -54,7 +54,7 @@ function ServicesPage() {
             to="/referenzen"
             className="mt-7 inline-flex items-center gap-2 rounded-full bg-white/15 px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-white/25"
           >
-            Beispielbild ansehen <ArrowRight className="h-4 w-4" />
+            Projekt ansehen <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
 

@@ -24,6 +24,10 @@ dist-ssr
 .env
 .env.local
 
+# Raw original project photos (unprocessed, kept locally only —
+# optimized crops get placed in src/assets and committed from there)
+/projektfotos/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -2,24 +2,26 @@ import facadeBefore from "@/assets/ref-facade-before.jpg";
 import facadeAfter from "@/assets/ref-facade-after.jpg";
 import livingBefore from "@/assets/ref-living-before.jpg";
 import livingAfter from "@/assets/ref-living-after.jpg";
-import stairsBefore from "@/assets/ref-stairs-before.jpg";
-import stairsAfter from "@/assets/ref-stairs-after.jpg";
+import stairsRealBefore from "@/assets/ref-stairs-real-before.jpg";
+import stairsRealAfter from "@/assets/ref-stairs-real-after.jpg";
 import officeBefore from "@/assets/ref-office-before.jpg";
 import officeAfter from "@/assets/ref-office-after.jpg";
 
-// Hinweis: Diese Bilder sind Beispiel-/Inspirationsbilder und zeigen keine
-// abgeschlossenen Raumgeschneidert-Projekte. Sie werden durch echte
-// Projektfotos ersetzt, sobald diese vorliegen.
+// Hinweis: Bis auf die Treppenmodernisierung (echtes eigenes Projekt) sind
+// die übrigen Bilder Beispiel-/Inspirationsbilder und zeigen keine
+// abgeschlossenen Raumgeschneidert-Projekte. Sie werden nach und nach durch
+// echte Projektfotos ersetzt.
 export const referenceProjects = [
   {
     category: "Treppenmodernisierung",
-    title: "Treppenmodernisierung (Beispielbild)",
-    desc: "So kann aus einer bestehenden Treppe ein moderner Blickfang werden. Unser eigenes Vinyltreppen-Projekt mit echten Fotos folgt hier in Kürze.",
-    before: stairsBefore,
-    after: stairsAfter,
-    beforeAlt: "Beispielbild: abgenutzte Holztreppe vor der Modernisierung",
-    afterAlt: "Beispielbild: moderne, hochwertig wirkende Treppe nach der Modernisierung",
-    isPlaceholder: true,
+    title: "Vinyltreppen-Modernisierung",
+    desc: "Die bestehende Treppe wurde nicht ersetzt, sondern neu verkleidet: Das Vinyl wurde rückseitig V-förmig gefräst, erwärmt, um 90° gebogen und passgenau verklebt — für eine helle, moderne Holzoptik aus einem Guss.",
+    before: stairsRealBefore,
+    after: stairsRealAfter,
+    beforeAlt: "Rohe Holztreppe während der Vorbereitung, vor der Vinylverkleidung",
+    afterAlt: "Fertig verkleidete Treppe mit heller Vinyl-Holzoptik",
+    isPlaceholder: false,
+    aspect: "aspect-[3/4]",
   },
   {
     category: "Exklusive Wandgestaltung",
@@ -30,6 +32,7 @@ export const referenceProjects = [
     beforeAlt: "Beispielbild: Wohnzimmer mit alter Blümchentapete",
     afterAlt: "Beispielbild: modernes Wohnzimmer mit blauer Akzentwand",
     isPlaceholder: true,
+    aspect: "aspect-[4/3]",
   },
   {
     category: "Klassische Malerarbeiten",
@@ -40,6 +43,7 @@ export const referenceProjects = [
     beforeAlt: "Beispielbild: verwitterte Hausfassade vor der Renovierung",
     afterAlt: "Beispielbild: frisch gestrichene Hausfassade nach der Renovierung",
     isPlaceholder: true,
+    aspect: "aspect-[4/3]",
   },
   {
     category: "Klassische Malerarbeiten",
@@ -50,5 +54,6 @@ export const referenceProjects = [
     beforeAlt: "Beispielbild: leere, abgenutzte Bürofläche vor der Renovierung",
     afterAlt: "Beispielbild: modern renoviertes Büro mit Akzentwand",
     isPlaceholder: true,
+    aspect: "aspect-[4/3]",
   },
 ] as const;
