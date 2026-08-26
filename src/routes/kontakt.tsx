@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/Layout";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { useState } from "react";
@@ -163,7 +163,13 @@ function ContactPage() {
                       </>
                     )}
                   </button>
-                  <p className="text-xs text-muted-foreground">Mit dem Absenden stimmen Sie unserer Datenschutzerklärung zu.</p>
+                  <p className="text-xs text-muted-foreground">
+                    Mit dem Absenden stimmen Sie unserer{" "}
+                    <Link to="/datenschutz" className="underline hover:text-foreground">
+                      Datenschutzerklärung
+                    </Link>{" "}
+                    zu.
+                  </p>
                 </form>
               )}
             </div>
